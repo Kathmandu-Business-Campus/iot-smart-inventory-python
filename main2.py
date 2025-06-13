@@ -18,7 +18,7 @@ try:
             # Instead of using pynput for emulating keyboard, 
             # you may use requests library to send request to your web application server.
             print(f"Received: {line}")
-            requests.post('http://localhost:8000/path/name', data=line)
+            requests.post('http://localhost:8000/path/name', data={"line": line})
 
 except KeyboardInterrupt:
     print("Stopped.")
